@@ -50,6 +50,7 @@ export class ProductComponent implements OnInit {
       { field: 'discountDefault', headerName: 'Giảm giá', sortable: true, filter: true, minWidth: 100 },
       { field: 'description', headerName: 'Mô tả', sortable: true, filter: true, minWidth: 100 },
       { field: 'supplierName', headerName: 'Nhà cung cấp', sortable: true, filter: true, minWidth: 100 },
+      { field: 'quantity', headerName: 'Số lượng tồn kho', sortable: true, filter: true, minWidth: 100 },
       { field: 'statusName', headerName: 'Trạng thái', minWidth: 150, cellRenderer: 'statusNameCellRender' },
       {
         headerName: 'Thao tác',
