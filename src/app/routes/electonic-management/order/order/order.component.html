@@ -169,7 +169,7 @@
       <div class="col-md-6">
         <div class="date-currency">
           <p>
-            Ngày báo giá: <span id="price_time">{{ currentDate | date: 'dd/MM/yyyy HH:mm:ss' }}</span>
+            Ngày báo giá: <span id="price_time">{{ currentDate | date : 'dd/MM/yyyy HH:mm:ss' }}</span>
           </p>
           <p>Đơn vị tính: <span class="currency">VNĐ</span></p>
         </div>
@@ -202,35 +202,35 @@
           <td align="center">{{ prod.thoiGianBaoHanh + prod.loaiBaoHanh }}</td>
           <td align="center">{{ prod.count }}</td>
           <td align="center">
-            <span *ngIf="prod.discountDefault > 0" style="text-decoration: line-through">{{ prod.amoutDefault | currency: 'VND' }}</span>
-            <br /><span> {{ prod.amoutDefault - prod.discountDefault | currency: 'VND' }}</span>
+            <span *ngIf="prod.discountDefault > 0" style="text-decoration: line-through">{{ prod.amoutDefault | currency : 'VND' }}</span>
+            <br /><span> {{ prod.amoutDefault - prod.discountDefault | currency : 'VND' }}</span>
           </td>
           <!--<td align="center"><br />
  <b>Notice</b>:  Undefined index: totalPrice in <b>/var/www/html/hanoicomputer.vn/public_html/cache/template/shopping_cart_new.2a23035172ef151290d8e2b9e615fc28.php</b> on line <b>86</b><br />
  0 VNĐ</td>-->
           <td>
-            {{ prod.subTotal | currency: 'VND' }}
+            {{ prod.subTotal | currency : 'VND' }}
           </td>
         </tr>
         <tr>
           <td colspan="7"></td>
           <td colspan="2"><strong>Phí vận chuyển</strong></td>
           <td>
-            <strong style="color: red">{{ (itemPrint ? itemPrint.shipping : 0) | currency: 'VND' }}</strong>
+            <strong style="color: red">{{ (itemPrint ? itemPrint.shipping : 0) | currency : 'VND' }}</strong>
           </td>
         </tr>
         <tr>
           <td colspan="7"></td>
           <td colspan="2"><strong>Mã giảm giá</strong></td>
           <td>
-            <strong style="color: red">{{ (itemPrint ? itemPrint.discount : 0) | currency: 'VND' }}</strong>
+            <strong style="color: red">{{ (itemPrint ? itemPrint.discount : 0) | currency : 'VND' }}</strong>
           </td>
         </tr>
         <tr>
           <td colspan="7"></td>
           <td colspan="2"><strong>Tổng tiền đơn hàng</strong></td>
           <td>
-            <strong style="color: red">{{ (itemPrint ? itemPrint.grandTotal : 0) | currency: 'VND' }}</strong> <br />
+            <strong style="color: red">{{ (itemPrint ? itemPrint.grandTotal : 0) | currency : 'VND' }}</strong> <br />
 
             <strong *ngIf="itemPrint && itemPrint.phuongThucThanhToan === 2" style="color: red">(Đã thanh toán)</strong>
           </td>
@@ -250,7 +250,7 @@
       <p>Để biết thêm chi tiết, vui lòng liên hệ:</p>
       <p>Hotline: 0888888888 (8h00-21h30 hàng ngày)</p>
       <p>Email: <a href="mailto:abc@gmail.com">abc@gmail.com</a></p>
-      <p>Xanh lá Shop CHÂN THÀNH CẢM ƠN QUÝ KHÁCH HÀNG!</p>
+      <p>MOLLA CHÂN THÀNH CẢM ƠN QUÝ KHÁCH HÀNG!</p>
     </div>
   </div>
 </div>
