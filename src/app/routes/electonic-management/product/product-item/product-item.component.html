@@ -44,6 +44,13 @@
             </nz-form-control>
           </nz-form-item>
 
+          <nz-form-item>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="quantity1">Số lượng</nz-form-label>
+            <nz-form-control [nzSm]="17" [nzXs]="24" nzErrorTip="Số lượng không được để trống!">
+              <input nz-input formControlName="quantity" id="quantity1" placeholder="Nhập số lượng sản phẩm" />
+            </nz-form-control>
+          </nz-form-item>
+
           <nz-form-item nz-row>
             <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="status">Trạng thái</nz-form-label>
             <nz-form-control [nzSpan]="17">
@@ -116,7 +123,7 @@
         </div>
         <div nz-col nzSpan="24">
           <nz-form-item>
-            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="title">màu sắc</nz-form-label>
+            <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="title">Màu sắc</nz-form-label>
           </nz-form-item>
           <div nz-col nzSpan="24" nzJustify="right">
             <button
@@ -140,7 +147,7 @@
             <tbody>
               <tr
                 *ngFor="
-                  let data of gridColor.rowData | slice: (pageIndex - 1) * pageSize:(pageIndex - 1) * pageSize + pageSize;
+                  let data of gridColor.rowData | slice : (pageIndex - 1) * pageSize : (pageIndex - 1) * pageSize + pageSize;
                   let i = index
                 "
               >
@@ -245,7 +252,10 @@
             </thead>
             <tbody>
               <tr
-                *ngFor="let data of grid.rowData | slice: (pageIndex - 1) * pageSize:(pageIndex - 1) * pageSize + pageSize; let i = index"
+                *ngFor="
+                  let data of grid.rowData | slice : (pageIndex - 1) * pageSize : (pageIndex - 1) * pageSize + pageSize;
+                  let i = index
+                "
               >
                 <td>{{ i + 1 }}</td>
                 <td>

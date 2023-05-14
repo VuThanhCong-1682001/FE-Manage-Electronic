@@ -189,6 +189,7 @@ export class ProductItemComponent implements OnInit {
       loaiBaoHanh: [null, [Validators.required]],
       description: [null, [Validators.required]],
       status: [true],
+      quantity: [null, [Validators.required]],
     });
   }
   addMeta(event: any) {
@@ -353,6 +354,7 @@ export class ProductItemComponent implements OnInit {
         thoiGianBaoHanh: [{ value: null, disabled: this.isInfo }, [Validators.required]],
         loaiBaoHanh: [{ value: null, disabled: this.isInfo }, [Validators.required]],
         description: [{ value: null, disabled: this.isInfo }, [Validators.required]],
+        quantity: [{ value: null, disabled: this.isInfo }, [Validators.required]],
       });
     } else {
       if (this.item.attachments.length > 0) {
@@ -386,6 +388,7 @@ export class ProductItemComponent implements OnInit {
         thoiGianBaoHanh: [{ value: this.item.thoiGianBaoHanh, disabled: this.isInfo }, [Validators.required]],
         loaiBaoHanh: [{ value: this.item.loaiBaoHanh, disabled: this.isInfo }, [Validators.required]],
         description: [{ value: this.item.description, disabled: this.isInfo }, [Validators.required]],
+        quantity: [{ value: this.item.quantity, disabled: this.isInfo }, [Validators.required]],
       });
     }
   }
@@ -522,6 +525,7 @@ export class ProductItemComponent implements OnInit {
       thoiGianBaoHanh: this.form.controls.thoiGianBaoHanh.value,
       loaiBaoHanh: this.form.controls.loaiBaoHanh.value,
       description: this.form.controls.description.value,
+      quantity: +this.form.controls.quantity.value,
     };
 
     if (this.isAdd) {
